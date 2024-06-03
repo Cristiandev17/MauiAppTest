@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ur="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:vm="clr-namespace:MauiAppTest.ViewModels"
+    x:Class="MauiAppTest.Pages.EntryUserPage"        
+    Title="EntryUserPage">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}"/>
+    </ContentPage.Behaviors>
+    <ContentPage.BindingContext>
+        <vm:EntryUserViewModel/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout
+        Padding="30,40"
+        Spacing="45">
+        <Image
+            Source="dotnet_bot.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a race car number eight" />
+
+        <ur:TextField
+            Title="Ingrese el nombre por favor"
+            Text="{Binding UserName}"
+            Keyboard="Text">
+            <validation:RequiredValidation />
+        </ur:TextField>
+
+        <Button 
+            StyleClass="ElevatedButton" 
+            Text="Ingresar" 
+            Command="{Binding EnterCommand}"/>
+
+        <VerticalStackLayout Spacing="10">
+            <Switch IsToggled="{Binding IsTheme}" HorizontalOptions="Center">
+                <Switch.Behaviors>
+                    <toolkit:EventToCommandBehavior EventName="Toggled" Command="{Binding ChangeThemeCommand}" />
+                </Switch.Behaviors>
+            </Switch>
+
+            <Label Text="{Binding ThemeSelected}" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

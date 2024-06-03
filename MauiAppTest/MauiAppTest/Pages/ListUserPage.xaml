@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:MauiAppTest.ViewModels"
+    x:Class="MauiAppTest.Pages.ListUserPage"
+    BackgroundColor="White"
+    Title="ListUserPage">
+     <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}" />
+    </ContentPage.Behaviors>
+    <ContentPage.BindingContext>
+        <vm:ListUserViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Sync"
+            Command="{Binding SyncDataWithMongoDBCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout>
+        <CollectionView 
+            ItemsSource="{Binding Users}"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" RowDefinitions="*, *">                        
+                        <Label 
+                            TextColor="Red"
+                            Grid.Row="0"
+                            Text="{Binding Email}"
+                            FontSize="Large"
+                            FontAttributes="Bold"/>
+                        <Label 
+                            TextColor="Orange"
+                            Grid.Row="1"
+                            Text="{Binding Phone}"
+                            FontSize="Large"
+                            FontAttributes="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

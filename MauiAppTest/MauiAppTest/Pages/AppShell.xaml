@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="MauiAppTest.Pages.AppShell" 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pg="clr-namespace:MauiAppTest.Pages"
+    xmlns:local="clr-namespace:MauiAppTest.Pages"
+    FlyoutBehavior="Disabled"         
+    Title="AppShell">
+    <ShellContent
+        Title="ListUser"
+        ContentTemplate="{DataTemplate local:ListUserPage}"
+        Route="ListUser" />
+   
+</Shell>

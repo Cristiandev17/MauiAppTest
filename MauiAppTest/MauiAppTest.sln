@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppTest", "MauiAppTest\MauiAppTest.csproj", "{BA66B971-977A-4DBB-9F3B-26CE9BF1E570}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppTest.Core", "MauiAppTest.Core\MauiAppTest.Core.csproj", "{C0774DB0-7AAD-4CFC-A3BB-B21085F502E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppTest.Infrastructure", "MauiAppTest.Infrastructure\MauiAppTest.Infrastructure.csproj", "{0C8A5CC7-8208-4360-A745-7D8D14C4A2D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA66B971-977A-4DBB-9F3B-26CE9BF1E570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA66B971-977A-4DBB-9F3B-26CE9BF1E570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA66B971-977A-4DBB-9F3B-26CE9BF1E570}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BA66B971-977A-4DBB-9F3B-26CE9BF1E570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA66B971-977A-4DBB-9F3B-26CE9BF1E570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0774DB0-7AAD-4CFC-A3BB-B21085F502E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0774DB0-7AAD-4CFC-A3BB-B21085F502E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0774DB0-7AAD-4CFC-A3BB-B21085F502E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0774DB0-7AAD-4CFC-A3BB-B21085F502E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C8A5CC7-8208-4360-A745-7D8D14C4A2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8A5CC7-8208-4360-A745-7D8D14C4A2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8A5CC7-8208-4360-A745-7D8D14C4A2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8A5CC7-8208-4360-A745-7D8D14C4A2D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
